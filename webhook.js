@@ -3,6 +3,7 @@ const stripe = require('stripe')("sk_test_51MywnDKL9hIJ3aoFj7ufDEeOXDySBcUCVviuJ
 const { getFirestore, doc, setDoc } = require('firebase/firestore');
 const { initializeApp } = require('firebase/app');
 require('firebase/firestore');
+var cors = require('cors');
 const firebaseConfig = {
   apiKey: "AIzaSyD0swxWtYTjVQH33wzr0YMeewl6j_Omppc",
   authDomain: "term-project-371.firebaseapp.com",
@@ -12,7 +13,7 @@ const firebaseConfig = {
   appId: "1:986762358488:web:49486344fd130afd8eb1ad",
   measurementId: "G-2B4LVY46VX"
 };
-
+app.use(cors());
 initializeApp(firebaseConfig);
 const db = getFirestore();
 const app = express();

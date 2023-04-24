@@ -7,8 +7,6 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "yarn install",
     "serve": "node webhook.js"
-
-
   },
   "author": "",
   "license": "ISC",
@@ -17,5 +15,8 @@
     "express": "^4.18.2",
     "firebase": "^9.20.0",
     "stripe": "^12.2.0"
+  },
+  "devDependencies": {
+    "cors": "^2.8.5"
   }
 }
