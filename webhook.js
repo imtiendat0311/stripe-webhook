@@ -13,10 +13,11 @@ const firebaseConfig = {
   appId: "1:986762358488:web:49486344fd130afd8eb1ad",
   measurementId: "G-2B4LVY46VX"
 };
-app.use(cors());
+
 initializeApp(firebaseConfig);
 const db = getFirestore();
 const app = express();
+app.use(cors());
 app.use(
   express.json({
     verify: function (req, res, buf) {
